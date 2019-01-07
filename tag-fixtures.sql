@@ -1,5 +1,6 @@
-insert into tag (id, name, description) values (1, 'html', '');
-insert into tag (id, name, description) values (2, 'css', '');
-insert into tag (id, name, description) values (3, 'js', '');
-insert into tag (id, name, description) values (4, 'php', '');
-insert into tag (id, name, description) values (5, 'sql', '');
+INSERT INTO tag (id, name, description) VALUES (1, 'html', '');
+INSERT INTO tag (id, name, description) VALUES (2, 'css', '');
+INSERT INTO tag (id, name, description) VALUES (3, 'js', '');
+INSERT INTO tag (id, name, description) VALUES (4, 'php', '');
+INSERT INTO tag (id, name, description) VALUES (5, 'sql', '');
+

@@ -82,3 +82,4 @@ FROM tag
 LEFT JOIN student_tag ON student_tag.tag_id = tag.id
 LEFT JOIN student ON student.id = student_tag.student_id
 WHERE tag.id = 2
+

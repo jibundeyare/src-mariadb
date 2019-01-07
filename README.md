@@ -8,7 +8,7 @@ project :
 
 - id : int, unsigned, primary key, auto-increment
 - name : varchar, 255
-- description : text
+- description : text, nullable
 - client_name : varchar, 255
 - start_date : date, nullable
 - checkpoint_date : date, nullable
@@ -22,18 +22,13 @@ student :
 - email : varchar, 255
 - creation_date : timestamp, default value : current_timestamp
 - modification_date : timestamp, default value : current_timestamp, on update : current_timestamp
-- project_id : int, unsigned, foreign key : project.id
+- project_id : int, unsigned, nullable, foreign key : project.id
 
 tag :
 
 - id : int, unsigned, primary key, auto-increment
 - name : varchar, 255
 - description : text
-
-project_student :
-
-- project_id : int, unsigned, index, constraint : project.id
-- student_id : int, unsigned, index, constraint : student.id
 
 project_tag :
 
