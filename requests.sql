@@ -1,4 +1,6 @@
--- Requêtes SQL simples
+-- # Requêtes SQL
+
+-- ## Requêtes SQL simples
 
 -- lister tous les students
 SELECT *
@@ -29,7 +31,61 @@ SELECT *
 FROM student
 WHERE creation_date >= '2018-01-01 00:00:00'
 
--- Requêtes SQL avec jointure
+
+
+-- ## Requêtes SQL avec jointure « many to one »
+
+-- lister tous les students avec leurs projets
+SELECT *
+FROM student
+INNER JOIN project ON project.id = student.project_id
+
+-- lister tous les students avec leurs projets, même s'ils n'en ont pas
+SELECT *
+FROM student
+LEFT JOIN project ON project.id = student.project_id
+
+-- lister le student dont l'id est `2` avec son projet
+SELECT *
+FROM student
+INNER JOIN project ON project.id = student.project_id
+WHERE student.id = 2
+
+-- lister le student dont l'id est `53` avec son projet, même s'il n'en a pas
+SELECT *
+FROM student
+LEFT JOIN project ON project.id = student.project_id
+WHERE student.id = 53
+
+
+
+-- ## Requêtes SQL avec jointure « one to many »
+
+-- lister tous les projects avec leurs students
+SELECT *
+FROM project
+INNER JOIN student ON student.project_id = project.id
+
+-- lister tous les projects avec leurs students, même s'ils n'en ont pas
+SELECT *
+FROM project
+LEFT JOIN student ON student.project_id = project.id
+
+-- lister le project dont l'id est `3` avec ses students
+SELECT *
+FROM project
+INNER JOIN student ON student.project_id = project.id
+WHERE project.id = 3
+
+-- lister le project dont l'id est `4` avec ses students, même s'il n'en a pas
+SELECT *
+FROM project
+LEFT JOIN student ON student.project_id = project.id
+WHERE project.id = 4
+
+
+
+-- ## Requêtes SQL avec jointure « many to many »
 
 -- lister tous les students avec leurs tags
 SELECT *
