@@ -1,8 +1,6 @@
 # MySQL
 
-## Analyse
-
-### Les fichiers SQL
+## Les fichiers SQL
 
 `src_mysql.sql` est un export de la BDD qui contient la structure et les données.
 
@@ -12,6 +10,8 @@
 
 Attention : ces fichiers SQL sont paramétrés pour remplacer les données (`DROP TABLE IF EXISTS` avant `CREATE TABLE`, `TRUNCATE` avant `INSERT`).
 Si vous voulez conservez vos données, faites un backups avant d'importer ces fichiers SQL.
+
+## Analyse
 
 ### Les tables
 
