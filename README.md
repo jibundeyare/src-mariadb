@@ -13,7 +13,27 @@ Si vous voulez conservez vos données, faites un backups avant d'importer ces fi
 
 ## Analyse
 
+
 ### Les tables
+
+student :
+
+- id : int, unsigned, primary key, auto-increment
+- firstname : varchar, 255
+- lastname : varchar, 255
+- email : varchar, 255
+- creation_date : timestamp, default value : current_timestamp
+- modification_date : timestamp, default value : current_timestamp, on update : current_timestamp
+- school_year_id : int, unsigned, nullable, foreign key : school_year.id
+- project_id : int, unsigned, nullable, foreign key : project.id
+
+school_year :
+
+- id : int, unsigned, primary key, auto-increment
+- name : varchar, 255
+- description : text, nullable
+- start_date : date, nullable
+- start_end : date, nullable
 
 project :
 
@@ -24,16 +44,6 @@ project :
 - start_date : date, nullable
 - checkpoint_date : date, nullable
 - delivery_date : date, nullable
-
-student :
-
-- id : int, unsigned, primary key, auto-increment
-- firstname : varchar, 255
-- lastname : varchar, 255
-- email : varchar, 255
-- creation_date : timestamp, default value : current_timestamp
-- modification_date : timestamp, default value : current_timestamp, on update : current_timestamp
-- project_id : int, unsigned, nullable, foreign key : project.id
 
 tag :
 
