@@ -51,9 +51,25 @@ DROP TABLE IF EXISTS `project_tag`;
 CREATE TABLE IF NOT EXISTS `project_tag` (
   `project_id` int(10) UNSIGNED NOT NULL,
   `tag_id` int(10) UNSIGNED NOT NULL,
-  KEY `project_id` (`project_id`),
-  KEY `tag_id` (`tag_id`)
+  KEY `fk_project_tag_project_id` (`project_id`),
+  KEY `fk_project_tag_tag_id` (`tag_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `school_year`
+--
+
+DROP TABLE IF EXISTS `school_year`;
+CREATE TABLE IF NOT EXISTS `school_year` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci,
+  `date_start` date DEFAULT NULL,
+  `date_end` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -69,9 +85,11 @@ CREATE TABLE IF NOT EXISTS `student` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `creation_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modification_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `school_year_id` int(10) UNSIGNED DEFAULT NULL,
   `project_id` int(10) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `project_id` (`project_id`)
+  KEY `fk_student_project_id` (`project_id`),
+  KEY `fk_student_school_year_id` (`school_year_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -117,7 +135,8 @@ ALTER TABLE `project_tag`
 -- Contraintes pour la table `student`
 --
 ALTER TABLE `student`
-  ADD CONSTRAINT `fk_project_id` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`);
+  ADD CONSTRAINT `fk_student_project_id` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`),
+  ADD CONSTRAINT `fk_student_school_year_id` FOREIGN KEY (`school_year_id`) REFERENCES `school_year`(`id`);
 
 --
 -- Contraintes pour la table `student_tag`
