@@ -13,6 +13,9 @@ Si vous voulez conservez vos données, faites un backups avant d'importer ces fi
 
 ## Analyse
 
+Voici le schéma de la BDD :
+
+![Schéma de la BDD](img/src_mysql-schema.png)
 
 ### Les tables
 
@@ -73,7 +76,7 @@ Le moyen le plus simple de les tester est de les copier-coller dans PhpMyAdmin.
 - lister tous les projects
 - lister le student dont l'id est `2`
 - lister le project dont l'id est `3`
-- lister les students dont l'email contient la chaîne de caractères "popschool.fr"
+- lister les students dont l'email contient la chaîne de caractères `popschool.fr`
 - lister les students dont la date de création est antérieure à une certaine heure (à vous de choisir l'heure)
 
 ### Requêtes SQL avec jointure « many to one »
