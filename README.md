@@ -66,33 +66,79 @@ student_tag :
 
 ## Requêtes SQL possibles
 
-Les requêtes sont stockées dans le fichier `requests.sql`.
-
-Le moyen le plus simple de les tester est de les copier-coller dans PhpMyAdmin.
-
 ### Requêtes SQL simples
 
-- lister tous les students
-- lister tous les projects
-- lister le student dont l'id est `2`
-- lister le project dont l'id est `3`
-- lister les students dont l'email contient la chaîne de caractères `popschool.fr`
-- lister les students dont la date de création est antérieure à une certaine heure (à vous de choisir l'heure)
+Listez :
+
+- tous les students
+- tous les projects
+- le student dont l'id est `2`
+- les students dont l'id n'est pas `2`
+- le project dont l'id est `3`
+- les projects dont l'id n'est pas `3`
+- les students dont l'email contient la chaîne de caractères `.uk`
+- les students dont la date de création est antérieure au 01/07/2018 exclus
+- les projets dont la description ne contient pas la chaîne de caractères `another`
+- les projets dont la date de création est postérieure au 01/04/2018 inclus
+- les students ayant un projet
+- les students n'ayant pas de projet
+
+### Requêtes SQL avec critères multiples
+
+Listez :
+
+- les students :
+  - dont l'email contient la chaîne de caractères `.com`
+  - OU dont la date de création est antérieure au 01/07/2018 exclus
+
+- les students :
+  - dont l'email contient la chaîne de caractères `.com`
+  - ET dont la date de création est antérieure au 01/07/2018 exclus
+
+- les students :
+  - dont la date de création est postérieure au 01/01/2018 exclus
+  - ET dont la date de création est antérieure au 01/07/2018 exclus
+
+- les projets :
+  - dont la description ne contient pas la chaîne de caractères `another`
+  - OU dont la date de création est postérieure au 01/04/2018 inclus
+
+- les projets :
+  - dont la description ne contient pas la chaîne de caractères `another`
+  - ET dont la date de création est postérieure au 01/04/2018 inclus
+
+- les projets :
+  - dont la date de création est postérieure au 01/01/2018 inclus
+  - ET dont la date de création est antérieure au 01/03/2018 exclus
+
+- les students :
+  - dont l'email contient la chaîne de caractères `.com` ET la date de création est antérieure au 01/07/2018 exclus
+  - OU ayant un projet
+
+- les students :
+  - dont l'email contient la chaîne de caractères `.com`ET la date de création est antérieure au 01/07/2018 exclus
+  - ET n'ayant pas de projet
 
 ### Requêtes SQL avec jointure « many to one »
 
-- lister tous les students avec leurs projets
-- lister le student dont l'id est `2` avec son projet
+Listez :
+
+- tous les students avec leurs projets
+- le student dont l'id est `2` avec son projet
 
 ### Requêtes SQL avec jointure « one to many »
 
-- lister tous les projects avec leurs students
-- lister le project dont l'id est `3` avec ses students
+Listez :
+
+- tous les projects avec leurs students
+- le project dont l'id est `3` avec ses students
 
 ### Requêtes SQL avec jointure « many to many »
 
-- lister tous les students avec leurs tags
-- lister tous les tags avec leurs students
-- lister le student dont l'id est `2` avec ses tags
-- lister le tag dont l'id est `2` avec ses students
+Listez :
+
+- tous les students avec leurs tags
+- tous les tags avec leurs students
+- le student dont l'id est `2` avec ses tags
+- le tag dont l'id est `2` avec ses students
 
