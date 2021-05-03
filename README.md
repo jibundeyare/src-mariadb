@@ -78,7 +78,7 @@ Listez :
 - les projects dont l'id n'est pas `3`
 - les students dont l'email contient la chaîne de caractères `.uk`
 - les students dont la date de création est antérieure au 01/07/2018 exclus
-- les projets dont la description ne contient pas la chaîne de caractères `another`
+- les projets dont le nom du client ne contient pas la chaîne de caractères `another`
 - les projets dont la date de création est postérieure au 01/04/2018 inclus
 - les students ayant un projet
 - les students n'ayant pas de projet
