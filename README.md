@@ -101,15 +101,15 @@ Listez :
 
 - les projets :
   - dont la description ne contient pas la chaîne de caractères `another`
-  - OU dont la date de création est postérieure au 01/04/2018 inclus
+  - OU dont la date de début est postérieure au 01/04/2018 inclus
 
 - les projets :
   - dont la description ne contient pas la chaîne de caractères `another`
-  - ET dont la date de création est postérieure au 01/04/2018 inclus
+  - ET dont la date de début est postérieure au 01/04/2018 inclus
 
 - les projets :
   - dont la date de création est postérieure au 01/01/2018 inclus
-  - ET dont la date de création est antérieure au 01/03/2018 exclus
+  - ET dont la date de début est antérieure au 01/03/2018 exclus
 
 - les students :
   - dont l'email contient la chaîne de caractères `.com` ET la date de création est antérieure au 01/07/2018 exclus
