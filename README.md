@@ -15,7 +15,7 @@ Si vous voulez conservez vos données, faites un backups avant d'importer ces fi
 
 Voici le schéma de la BDD :
 
-![Schéma de la BDD](img/src_mysql-schema.png)
+![Schéma de la BDD](img/src_mariadb-schema.png)
 
 ### Les tables
 
