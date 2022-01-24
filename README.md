@@ -22,28 +22,28 @@ Voici le schéma de la BDD :
 student :
 
 - id : int, unsigned, primary key, auto-increment
-- firstname : varchar, 255
-- lastname : varchar, 255
-- email : varchar, 255
-- creation_date : timestamp, default value : current_timestamp
-- modification_date : timestamp, default value : current_timestamp, on update : current_timestamp
-- school_year_id : int, unsigned, nullable, foreign key : school_year.id
+- firstname : varchar, 190
+- lastname : varchar, 190
+- email : varchar, 190
+- created_at : datetime
+- updated_at : datetime
+- school_year_id : int, unsigned, foreign key : school_year.id
 - project_id : int, unsigned, nullable, foreign key : project.id
 
 school_year :
 
 - id : int, unsigned, primary key, auto-increment
-- name : varchar, 255
+- name : varchar, 190
 - description : text, nullable
 - start_date : date, nullable
-- start_end : date, nullable
+- end_date : date, nullable
 
 project :
 
 - id : int, unsigned, primary key, auto-increment
-- name : varchar, 255
+- name : varchar, 190
 - description : text, nullable
-- client_name : varchar, 255
+- client_name : varchar, 190
 - start_date : date, nullable
 - checkpoint_date : date, nullable
 - delivery_date : date, nullable
@@ -51,7 +51,7 @@ project :
 tag :
 
 - id : int, unsigned, primary key, auto-increment
-- name : varchar, 255
+- name : varchar, 190
 - description : text
 
 project_tag :
