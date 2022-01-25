@@ -76,7 +76,7 @@ Listez :
 - les students dont l'id n'est pas `2`
 - le project dont l'id est `3`
 - les projects dont l'id n'est pas `3`
-- les students dont l'email contient la chaîne de caractères `example.com`
+- les students dont l'email contient la chaîne de caractères `.com`
 - les students dont la date de création est antérieure au 10/01/2021 inclus
 - les projets dont le nom du client ne contient pas la chaîne de caractères `Dolores`
 - les projets dont la date de création est postérieure au 01/07/2021 inclus
@@ -115,34 +115,34 @@ Listez :
 
 - les students :
   - dont l'email contient la chaîne de caractères `.com`
-  - OU dont la date de création est antérieure au 01/07/2018 exclus
+  - OU dont la date de création est antérieure au 10/01/2021 inclus
 
 - les students :
   - dont l'email contient la chaîne de caractères `.com`
-  - ET dont la date de création est antérieure au 01/07/2018 exclus
+  - ET dont la date de création est antérieure au 10/01/2021 inclus
 
 - les students :
-  - dont la date de création est postérieure au 01/01/2018 exclus
-  - ET dont la date de création est antérieure au 01/07/2018 exclus
+  - dont la date de création est postérieure au 01/01/2021 exclus
+  - ET dont la date de création est antérieure au 10/01/2021 inclus
 
 - les projets :
-  - dont la description ne contient pas la chaîne de caractères `another`
-  - OU dont la date de début est postérieure au 01/04/2018 inclus
+  - dont la description ne contient pas la chaîne de caractères `Dolores`
+  - OU dont la date de début est postérieure au 01/07/2021 inclus
 
 - les projets :
-  - dont la description ne contient pas la chaîne de caractères `another`
-  - ET dont la date de début est postérieure au 01/04/2018 inclus
+  - dont la description ne contient pas la chaîne de caractères `Dolores`
+  - ET dont la date de début est postérieure au 01/07/2021 inclus
 
 - les projets :
-  - dont la date de création est postérieure au 01/01/2018 inclus
-  - ET dont la date de début est antérieure au 01/03/2018 exclus
+  - dont la date de création est postérieure au 01/01/2021 inclus
+  - ET dont la date de début est antérieure au 01/07/2021 inclus
 
 - les students :
-  - dont l'email contient la chaîne de caractères `.com` ET la date de création est antérieure au 01/07/2018 exclus
+  - dont l'email contient la chaîne de caractères `.com` ET la date de création est antérieure au 10/01/2021 inclus
   - OU ayant un projet
 
 - les students :
-  - dont l'email contient la chaîne de caractères `.com`ET la date de création est antérieure au 01/07/2018 exclus
+  - dont l'email contient la chaîne de caractères `.com`ET la date de création est antérieure au 10/01/2021 inclus
   - ET n'ayant pas de projet
 
 ### Requêtes avec jointure « many to one »
