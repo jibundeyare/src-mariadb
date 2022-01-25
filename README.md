@@ -1,12 +1,12 @@
-# MySQL
+# MariaDB
 
 ## Les fichiers SQL
 
-`src_mysql.sql` est un export de la BDD qui contient la structure et les données.
+`src_mariadb.sql` est un export de la BDD qui contient la structure et les données.
 
-`src_mysql-structure-only.sql` est un export de la BDD qui contient uniquement la structure.
+`src_mariadb-structure-only.sql` est un export de la BDD qui contient uniquement la structure.
 
-`src_mysql-data-only.sql` est un export de la BDD qui contient uniquement les données.
+`src_mariadb-data-only.sql` est un export de la BDD qui contient uniquement les données.
 
 Attention : ces fichiers SQL sont paramétrés pour remplacer les données (`DROP TABLE IF EXISTS` avant `CREATE TABLE`, `TRUNCATE` avant `INSERT`).
 Si vous voulez conservez vos données, faites un backups avant d'importer ces fichiers SQL.
@@ -66,7 +66,7 @@ student_tag :
 
 ## Requêtes SQL possibles
 
-### Requêtes SQL simples
+### Requêtes simples en lecture
 
 Listez :
 
@@ -76,14 +76,40 @@ Listez :
 - les students dont l'id n'est pas `2`
 - le project dont l'id est `3`
 - les projects dont l'id n'est pas `3`
-- les students dont l'email contient la chaîne de caractères `.uk`
-- les students dont la date de création est antérieure au 01/07/2018 exclus
-- les projets dont le nom du client ne contient pas la chaîne de caractères `another`
-- les projets dont la date de création est postérieure au 01/04/2018 inclus
+- les students dont l'email contient la chaîne de caractères `example.com`
+- les students dont la date de création est antérieure au 10/01/2021 inclus
+- les projets dont le nom du client ne contient pas la chaîne de caractères `Dolores`
+- les projets dont la date de création est postérieure au 01/07/2021 inclus
 - les students ayant un projet
 - les students n'ayant pas de projet
 
-### Requêtes SQL avec critères multiples
+### Requêtes en écriture
+
+Insérer :
+
+- un tag
+- un school year
+- un projet
+- un student
+- une relation student tag
+
+Mettez à jour :
+
+- un tag
+- une school year
+- un projet
+- un student
+- une relation student tag
+
+Supprimez :
+
+- un tag
+- une school year
+- un projet
+- une relation student tag
+- un student
+
+### Requêtes en lecture avec critères multiples
 
 Listez :
 
@@ -119,21 +145,21 @@ Listez :
   - dont l'email contient la chaîne de caractères `.com`ET la date de création est antérieure au 01/07/2018 exclus
   - ET n'ayant pas de projet
 
-### Requêtes SQL avec jointure « many to one »
+### Requêtes avec jointure « many to one »
 
 Listez :
 
 - tous les students avec leurs projets
 - le student dont l'id est `2` avec son projet
 
-### Requêtes SQL avec jointure « one to many »
+### Requêtes avec jointure « one to many »
 
 Listez :
 
 - tous les projects avec leurs students
 - le project dont l'id est `3` avec ses students
 
-### Requêtes SQL avec jointure « many to many »
+### Requêtes avec jointure « many to many »
 
 Listez :
 
