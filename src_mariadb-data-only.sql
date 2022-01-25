@@ -1,15 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  jeu. 10 jan. 2019 à 00:13
--- Version du serveur :  10.1.35-MariaDB
--- Version de PHP :  7.2.9
+-- Généré le : mar. 25 jan. 2022 à 01:15
+-- Version du serveur :  10.5.9-MariaDB
+-- Version de PHP : 8.0.6
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -20,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `src_mariadb`
+-- Base de données : `src_mariadb`
 --
 
 --
@@ -33,10 +32,26 @@ TRUNCATE TABLE `project`;
 --
 
 INSERT INTO `project` (`id`, `name`, `description`, `client_name`, `start_date`, `checkpoint_date`, `delivery_date`) VALUES
-(1, 'Foo', NULL, 'The Company', '2018-02-05', NULL, NULL),
-(2, 'Bar', NULL, 'The Other Company', '2018-03-12', NULL, NULL),
-(3, 'Baz', NULL, 'Another Company', '2018-04-02', NULL, NULL),
-(4, 'Lorem', NULL, 'Same But Different Company', '2018-05-07', NULL, NULL);
+(1, 'Projet test 1', 'Projet pour les tests 1', 'Client test 1', '2021-03-01', '2021-04-01', '2021-05-01'),
+(2, 'Est molestiae placeat hic.', 'Iure aspernatur qui vel ad vel aspernatur.', 'Laetitia Leveque', '2021-05-01', '2021-05-26', '2021-06-28'),
+(3, 'Quia voluptates quia nesciunt.', 'Aspernatur fugiat sunt totam in.', 'Christophe du Alves', '2021-05-01', '2021-05-30', '2021-07-01'),
+(4, 'Eligendi aut ut facere.', 'Optio est ut voluptatum.', 'Jacqueline Pierre', '2021-04-27', '2021-05-29', '2021-06-30'),
+(5, 'Ea nostrum vitae.', 'Officia tempora neque voluptas minima sit praesentium tempora.', 'Guy Le Roux', '2021-04-27', '2021-05-25', '2021-06-26'),
+(6, 'Asperiores aut molestias hic.', 'Qui asperiores est eligendi placeat eius provident.', 'Gérard-Adrien Pons', '2021-05-01', '2021-05-29', '2021-06-29'),
+(7, 'Voluptatem eaque a.', 'Et sit repellendus culpa.', 'Brigitte Clerc', '2021-04-26', '2021-05-27', '2021-07-01'),
+(8, 'Soluta necessitatibus totam.', 'Expedita sunt repudiandae maiores id.', 'Dominique Gonzalez-Antoine', '2021-04-30', '2021-05-28', '2021-06-29'),
+(9, 'Nihil ipsa quas ab sed.', 'Et perspiciatis debitis sint sed quibusdam consequuntur id culpa.', 'Caroline Benoit', '2021-04-28', '2021-05-31', '2021-06-25'),
+(10, 'Optio aliquam accusamus possimus.', 'Necessitatibus omnis similique illo sint a ea.', 'Margaux-Colette Mercier', '2021-04-25', '2021-05-26', '2021-06-29'),
+(11, 'Perspiciatis vel id similique est.', 'Quidem dolore sint eum recusandae esse sint.', 'Martin Laroche', '2021-04-26', '2021-05-28', '2021-06-28'),
+(12, 'Esse omnis occaecati.', 'Consequatur ut adipisci repellat facere facilis quo.', 'Adrien Guillou', '2021-04-28', '2021-05-31', '2021-06-25'),
+(13, 'Et est impedit quia.', 'Harum provident corrupti et voluptatem dolores.', 'Emmanuel Moreno', '2021-05-01', '2021-05-28', '2021-06-26'),
+(14, 'Dolore adipisci.', 'Dolore assumenda molestias magnam aliquid alias qui.', 'Laure Clement-Diaz', '2021-04-29', '2021-05-30', '2021-07-01'),
+(15, 'Dolor quod rerum eaque.', 'Deserunt vel et ut excepturi fugit ut.', 'Raymond Traore', '2021-04-29', '2021-05-28', '2021-06-25'),
+(16, 'Laudantium in numquam odio provident.', 'Nulla sed voluptatibus architecto fugit deleniti.', 'Matthieu Lebon', '2021-04-25', '2021-05-28', '2021-06-27'),
+(17, 'Sit et laboriosam accusamus.', 'Blanditiis dolor sunt et.', 'Henriette Dumont', '2021-04-27', '2021-05-29', '2021-06-28'),
+(18, 'Rerum sit.', 'Sit perspiciatis repellat ex et assumenda dolorum.', 'Eugène Richard', '2021-04-29', '2021-05-29', '2021-06-27'),
+(19, 'Quae ipsum labore.', 'Laudantium facere placeat mollitia et cumque vel.', 'Adrienne Bertrand-Munoz', '2021-04-26', '2021-05-26', '2021-06-28'),
+(20, 'Nobis sit sed rerum.', 'Earum voluptatibus consequatur veniam magnam.', 'Grégoire Foucher', '2021-05-01', '2021-05-28', '2021-06-26');
 
 --
 -- Tronquer la table avant d'insérer `project_tag`
@@ -50,11 +65,87 @@ TRUNCATE TABLE `project_tag`;
 INSERT INTO `project_tag` (`project_id`, `tag_id`) VALUES
 (1, 1),
 (1, 2),
-(2, 4),
-(2, 5),
+(1, 3),
+(2, 1),
+(2, 2),
+(2, 9),
+(2, 10),
 (3, 1),
-(3, 2),
-(3, 3);
+(3, 4),
+(3, 5),
+(3, 6),
+(4, 3),
+(4, 10),
+(5, 6),
+(5, 7),
+(6, 5),
+(6, 7),
+(7, 1),
+(7, 2),
+(7, 3),
+(8, 1),
+(8, 2),
+(8, 6),
+(8, 7),
+(9, 3),
+(9, 6),
+(9, 9),
+(10, 2),
+(10, 5),
+(10, 7),
+(11, 1),
+(11, 5),
+(11, 8),
+(11, 9),
+(12, 2),
+(12, 3),
+(12, 4),
+(12, 8),
+(13, 1),
+(13, 3),
+(13, 6),
+(14, 1),
+(14, 4),
+(14, 5),
+(14, 8),
+(15, 4),
+(15, 7),
+(15, 8),
+(16, 4),
+(16, 6),
+(16, 10),
+(17, 5),
+(17, 6),
+(17, 7),
+(17, 8),
+(18, 9),
+(18, 10),
+(19, 3),
+(19, 7),
+(20, 5),
+(20, 6),
+(20, 9);
+
+--
+-- Tronquer la table avant d'insérer `school_year`
+--
+
+TRUNCATE TABLE `school_year`;
+--
+-- Déchargement des données de la table `school_year`
+--
+
+INSERT INTO `school_year` (`id`, `name`, `description`, `start_date`, `end_date`) VALUES
+(1, 'Promo test', 'Promo pour les tests', '2021-01-01', '2021-08-01'),
+(2, 'Nam ratione aut.', 'Dolorem nulla corporis voluptatem illo distinctio molestiae.', '2021-01-27', '2021-07-26'),
+(3, 'Ut autem blanditiis.', 'Est et minima quibusdam corrupti qui eum est voluptas.', '2021-01-26', '2021-07-25'),
+(4, 'Illum et.', 'Quisquam dolores soluta ut aut vel.', '2021-01-29', '2021-07-29'),
+(5, 'Ut laborum ea.', 'Odio hic neque et sit.', '2021-01-27', '2021-07-26'),
+(6, 'Nobis laborum.', 'Qui sit debitis fugiat libero enim nihil.', '2021-01-30', '2021-07-30'),
+(7, 'Laboriosam cum.', 'Et magnam magni voluptatibus atque nam.', '2021-01-27', '2021-07-29'),
+(8, 'Fugit a.', 'Porro aut qui labore maiores est vero eum occaecati.', '2021-01-29', '2021-07-29'),
+(9, 'Et illo et.', 'A exercitationem reprehenderit amet explicabo officiis deserunt.', '2021-01-29', '2021-07-25'),
+(10, 'Deserunt in.', 'Deleniti repellendus labore aut et.', '2021-01-30', '2021-07-27');
 
 --
 -- Tronquer la table avant d'insérer `student`
@@ -65,107 +156,107 @@ TRUNCATE TABLE `student`;
 -- Déchargement des données de la table `student`
 --
 
-INSERT INTO `student` (`id`, `firstname`, `lastname`, `email`, `creation_date`, `modification_date`, `project_id`) VALUES
-(1, 'Brunhilde', 'Conroy', 'bconroy0@1und1.de', '2018-04-01 22:00:00', '2018-06-20 22:00:00', 1),
-(2, 'Hirsch', 'Emmanueli', 'hemmanueli1@nbcnews.com', '2018-05-02 22:00:00', '2018-01-19 23:00:00', 1),
-(3, 'Niel', 'Dron', 'ndron2@uol.com.br', '2018-02-08 23:00:00', '2018-10-09 22:00:00', 1),
-(4, 'Jacquenette', 'Lukash', 'jlukash3@flickr.com', '2018-03-11 23:00:00', '2018-06-22 22:00:00', 1),
-(5, 'Sergent', 'Windaybank', 'swindaybank4@scribd.com', '2018-07-10 22:00:00', '2018-09-29 22:00:00', 1),
-(6, 'Edeline', 'Lepere', 'elepere5@acquirethisname.com', '2018-08-16 22:00:00', '2018-04-21 22:00:00', 1),
-(7, 'Wilden', 'Adamou', 'wadamou6@zimbio.com', '2018-04-26 22:00:00', '2018-06-04 22:00:00', 1),
-(8, 'Roxanna', 'Whitesel', 'rwhitesel7@seattletimes.com', '2017-12-29 23:00:00', '2017-12-23 23:00:00', 1),
-(9, 'Donal', 'Britcher', 'dbritcher8@freewebs.com', '2018-10-13 22:00:00', '2018-03-07 23:00:00', 1),
-(10, 'Chaddy', 'Zealey', 'czealey9@facebook.com', '2018-10-24 22:00:00', '2018-10-31 23:00:00', 1),
-(11, 'Randee', 'Disbrow', 'rdisbrowa@webeden.co.uk', '2018-07-29 22:00:00', '2018-06-01 22:00:00', 2),
-(12, 'Arielle', 'Corragan', 'acorraganb@europa.eu', '2017-12-29 23:00:00', '2018-02-02 23:00:00', 2),
-(13, 'Tybalt', 'Degoe', 'tdegoec@yolasite.com', '2018-01-27 23:00:00', '2018-04-14 22:00:00', 2),
-(14, 'Giffer', 'Celez', 'gcelezd@dagondesign.com', '2018-11-03 23:00:00', '2018-11-11 23:00:00', 2),
-(15, 'Wallis', 'Fulcher', 'wfulchere@arizona.edu', '2018-08-27 22:00:00', '2018-09-30 22:00:00', 2),
-(16, 'Barn', 'Praton', 'bpratonf@taobao.com', '2018-05-03 22:00:00', '2018-06-24 22:00:00', 2),
-(17, 'Madalyn', 'Langran', 'mlangrang@china.com.cn', '2018-03-18 23:00:00', '2018-05-13 22:00:00', 2),
-(18, 'Winny', 'Parrot', 'wparroth@vkontakte.ru', '2018-09-11 22:00:00', '2018-05-13 22:00:00', 2),
-(19, 'Jenifer', 'Tedahl', 'jtedahli@cloudflare.com', '2018-05-14 22:00:00', '2018-06-19 22:00:00', 2),
-(20, 'Derrik', 'Tweedell', 'dtweedellj@aboutads.info', '2018-03-18 23:00:00', '2018-04-07 22:00:00', 2),
-(21, 'Brett', 'Clericoates', 'bclericoatesk@sphinn.com', '2018-01-06 23:00:00', '2018-08-17 22:00:00', 3),
-(22, 'Violette', 'Agerskow', 'vagerskowl@networksolutions.com', '2018-11-27 23:00:00', '2018-11-29 23:00:00', 3),
-(23, 'Dorita', 'Lewzey', 'dlewzeym@dailymail.co.uk', '2018-08-13 22:00:00', '2018-08-26 22:00:00', 3),
-(24, 'Jacquetta', 'Kynder', 'jkyndern@ed.gov', '2018-09-12 22:00:00', '2018-09-24 22:00:00', 3),
-(25, 'Caitlin', 'Clulow', 'cclulowo@deliciousdays.com', '2018-11-03 23:00:00', '2018-11-06 23:00:00', 3),
-(26, 'Gert', 'Vallis', 'gvallisp@yelp.com', '2018-02-02 23:00:00', '2018-08-21 22:00:00', 3),
-(27, 'Alys', 'Thorneloe', 'athorneloeq@google.pl', '2018-10-10 22:00:00', '2018-07-29 22:00:00', 3),
-(28, 'Antonia', 'Pietesch', 'apieteschr@ycombinator.com', '2018-10-22 22:00:00', '2018-01-24 23:00:00', 3),
-(29, 'Byram', 'Petrusch', 'bpetruschs@hao123.com', '2018-07-08 22:00:00', '2018-12-02 23:00:00', 3),
-(30, 'Odella', 'Pirt', 'opirtt@naver.com', '2018-05-24 22:00:00', '2018-03-14 23:00:00', 3),
-(31, 'Claybourne', 'Le Gall', 'clegallu@cam.ac.uk', '2018-06-20 22:00:00', '2018-11-15 23:00:00', NULL),
-(32, 'Marney', 'Natwick', 'mnatwickv@go.com', '2018-02-01 23:00:00', '2018-07-13 22:00:00', NULL),
-(33, 'Ilene', 'Warret', 'iwarretw@usgs.gov', '2018-04-02 22:00:00', '2018-11-15 23:00:00', NULL),
-(34, 'Gabi', 'Le Prevost', 'gleprevostx@geocities.com', '2018-04-23 22:00:00', '2018-08-22 22:00:00', NULL),
-(35, 'Lorain', 'Docwra', 'ldocwray@linkedin.com', '2018-04-30 22:00:00', '2018-01-30 23:00:00', NULL),
-(36, 'Maddie', 'Simeons', 'msimeonsz@1688.com', '2018-03-19 23:00:00', '2018-09-25 22:00:00', NULL),
-(37, 'Bobine', 'Mc Caughen', 'bmccaughen10@histats.com', '2018-11-08 23:00:00', '2018-08-05 22:00:00', NULL),
-(38, 'Drew', 'Josifovic', 'djosifovic11@sun.com', '2018-10-09 22:00:00', '2018-06-07 22:00:00', NULL),
-(39, 'Bronny', 'Boys', 'bboys12@marriott.com', '2018-03-23 23:00:00', '2018-09-21 22:00:00', NULL),
-(40, 'Jobie', 'Ortelt', 'jortelt13@mashable.com', '2018-12-01 23:00:00', '2018-10-02 22:00:00', NULL),
-(41, 'Shell', 'Thurske', 'sthurske14@spiegel.de', '2018-07-21 22:00:00', '2018-09-07 22:00:00', NULL),
-(42, 'Florence', 'Grinley', 'fgrinley15@booking.com', '2018-09-04 22:00:00', '2018-01-12 23:00:00', NULL),
-(43, 'Teddie', 'Meron', 'tmeron16@typepad.com', '2018-10-21 22:00:00', '2018-09-21 22:00:00', NULL),
-(44, 'Reynard', 'Simper', 'rsimper17@netvibes.com', '2018-01-15 23:00:00', '2018-07-18 22:00:00', NULL),
-(45, 'Rich', 'Marler', 'rmarler18@sciencedirect.com', '2018-07-15 22:00:00', '2018-04-19 22:00:00', NULL),
-(46, 'Marcellina', 'Fermoy', 'mfermoy19@aol.com', '2018-02-24 23:00:00', '2018-09-30 22:00:00', NULL),
-(47, 'Anny', 'Lloyds', 'alloyds1a@tuttocitta.it', '2018-11-14 23:00:00', '2018-01-04 23:00:00', NULL),
-(48, 'Zsazsa', 'Livesay', 'zlivesay1b@wix.com', '2018-11-14 23:00:00', '2018-07-20 22:00:00', NULL),
-(49, 'Brok', 'Crowthe', 'bcrowthe1c@intel.com', '2018-06-12 22:00:00', '2018-05-13 22:00:00', NULL),
-(50, 'Garold', 'Janz', 'gjanz1d@toplist.cz', '2018-08-13 22:00:00', '2018-08-26 22:00:00', NULL),
-(51, 'Rivi', 'Chatteris', 'rchatteris1e@nps.gov', '2018-02-22 23:00:00', '2018-03-23 23:00:00', NULL),
-(52, 'Cly', 'Lilbourne', 'clilbourne1f@tmall.com', '2018-03-07 23:00:00', '2018-05-01 22:00:00', NULL),
-(53, 'Gregg', 'Prangle', 'gprangle1g@facebook.com', '2018-07-20 22:00:00', '2018-09-15 22:00:00', NULL),
-(54, 'Bertha', 'Torbard', 'btorbard1h@army.mil', '2018-03-07 23:00:00', '2018-05-02 22:00:00', NULL),
-(55, 'Tamar', 'Glasscoe', 'tglasscoe1i@nifty.com', '2018-02-20 23:00:00', '2018-03-06 23:00:00', NULL),
-(56, 'Sylvia', 'Ninotti', 'sninotti1j@washingtonpost.com', '2018-11-13 23:00:00', '2018-02-22 23:00:00', NULL),
-(57, 'Pier', 'Hampshaw', 'phampshaw1k@themeforest.net', '2018-07-28 22:00:00', '2017-12-24 23:00:00', NULL),
-(58, 'Lesly', 'Feilden', 'lfeilden1l@github.com', '2018-09-14 22:00:00', '2018-01-17 23:00:00', NULL),
-(59, 'Tessi', 'MacKegg', 'tmackegg1m@mozilla.org', '2018-09-20 22:00:00', '2018-04-29 22:00:00', NULL),
-(60, 'Ara', 'Wyrill', 'awyrill1n@addthis.com', '2018-08-20 22:00:00', '2018-12-05 23:00:00', NULL),
-(61, 'Harlen', 'Tabourier', 'htabourier1o@dion.ne.jp', '2018-03-28 22:00:00', '2018-07-17 22:00:00', NULL),
-(62, 'Hedvige', 'Thornton-Dewhirst', 'hthorntondewhirst1p@ask.com', '2018-07-15 22:00:00', '2017-12-21 23:00:00', NULL),
-(63, 'Livy', 'MacEntee', 'lmacentee1q@4shared.com', '2018-05-05 22:00:00', '2018-01-10 23:00:00', NULL),
-(64, 'Tobit', 'Pietri', 'tpietri1r@sbwire.com', '2018-04-13 22:00:00', '2018-01-02 23:00:00', NULL),
-(65, 'Broderick', 'Cordle', 'bcordle1s@foxnews.com', '2018-04-22 22:00:00', '2018-03-18 23:00:00', NULL),
-(66, 'Karim', 'Mitchenson', 'kmitchenson1t@hexun.com', '2018-09-30 22:00:00', '2018-01-31 23:00:00', NULL),
-(67, 'Ebony', 'Furphy', 'efurphy1u@cocolog-nifty.com', '2018-01-03 23:00:00', '2018-10-11 22:00:00', NULL),
-(68, 'Reba', 'Dwight', 'rdwight1v@ovh.net', '2018-07-17 22:00:00', '2018-05-11 22:00:00', NULL),
-(69, 'Fey', 'Jossum', 'fjossum1w@army.mil', '2018-10-05 22:00:00', '2018-09-10 22:00:00', NULL),
-(70, 'Jillian', 'Kirwan', 'jkirwan1x@flavors.me', '2018-05-23 22:00:00', '2017-12-30 23:00:00', NULL),
-(71, 'Tobit', 'MacMickan', 'tmacmickan1y@alexa.com', '2017-12-29 23:00:00', '2018-07-02 22:00:00', NULL),
-(72, 'Virge', 'Lazar', 'vlazar1z@slideshare.net', '2018-09-29 22:00:00', '2018-08-30 22:00:00', NULL),
-(73, 'Afton', 'Rice', 'arice20@nationalgeographic.com', '2018-08-10 22:00:00', '2018-02-19 23:00:00', NULL),
-(74, 'Fania', 'Vasichev', 'fvasichev21@microsoft.com', '2018-08-08 22:00:00', '2018-06-12 22:00:00', NULL),
-(75, 'Arley', 'Mumbey', 'amumbey22@blogger.com', '2018-09-19 22:00:00', '2018-11-28 23:00:00', NULL),
-(76, 'Twila', 'Grogan', 'tgrogan23@huffingtonpost.com', '2018-07-24 22:00:00', '2018-04-18 22:00:00', NULL),
-(77, 'Les', 'Redolfi', 'lredolfi24@biblegateway.com', '2018-07-16 22:00:00', '2018-08-25 22:00:00', NULL),
-(78, 'Brittaney', 'Kemmish', 'bkemmish25@zdnet.com', '2018-01-13 23:00:00', '2018-03-17 23:00:00', NULL),
-(79, 'Nita', 'Halegarth', 'nhalegarth26@ning.com', '2018-09-14 22:00:00', '2018-12-10 23:00:00', NULL),
-(80, 'Herta', 'Haney`', 'hhaney27@pen.io', '2018-12-02 23:00:00', '2018-01-20 23:00:00', NULL),
-(81, 'Cass', 'Clackson', 'cclackson28@paypal.com', '2018-11-30 23:00:00', '2018-09-24 22:00:00', NULL),
-(82, 'Chalmers', 'Muzzillo', 'cmuzzillo29@newyorker.com', '2018-07-11 22:00:00', '2018-07-10 22:00:00', NULL),
-(83, 'Ingaborg', 'Mearns', 'imearns2a@bbb.org', '2018-10-18 22:00:00', '2018-09-06 22:00:00', NULL),
-(84, 'Marylee', 'Morton', 'mmorton2b@apache.org', '2018-08-10 22:00:00', '2018-11-21 23:00:00', NULL),
-(85, 'Tallulah', 'Sheringham', 'tsheringham2c@buzzfeed.com', '2018-08-06 22:00:00', '2018-03-25 22:00:00', NULL),
-(86, 'Phillie', 'Locarno', 'plocarno2d@loc.gov', '2018-02-04 23:00:00', '2018-03-11 23:00:00', NULL),
-(87, 'Glenine', 'Hellsdon', 'ghellsdon2e@live.com', '2018-09-04 22:00:00', '2018-01-17 23:00:00', NULL),
-(88, 'Marve', 'Overpool', 'moverpool2f@comcast.net', '2018-01-11 23:00:00', '2018-04-13 22:00:00', NULL),
-(89, 'De', 'Carbry', 'dcarbry2g@independent.co.uk', '2018-07-28 22:00:00', '2018-09-05 22:00:00', NULL),
-(90, 'Ciel', 'Cullimore', 'ccullimore2h@is.gd', '2018-08-20 22:00:00', '2018-09-22 22:00:00', NULL),
-(91, 'Herman', 'Adamek', 'hadamek2i@quantcast.com', '2018-07-05 22:00:00', '2018-10-10 22:00:00', NULL),
-(92, 'Angelique', 'Hanse', 'ahanse2j@reverbnation.com', '2018-08-17 22:00:00', '2018-02-10 23:00:00', NULL),
-(93, 'Dacey', 'Maior', 'dmaior2k@smh.com.au', '2018-07-18 22:00:00', '2018-10-12 22:00:00', NULL),
-(94, 'Daryle', 'Aberhart', 'daberhart2l@buzzfeed.com', '2018-12-10 23:00:00', '2018-03-30 22:00:00', NULL),
-(95, 'Arielle', 'Friary', 'afriary2m@noaa.gov', '2018-05-14 22:00:00', '2018-01-02 23:00:00', NULL),
-(96, 'Laurens', 'Sutter', 'lsutter2n@cyberchimps.com', '2018-06-02 22:00:00', '2018-09-12 22:00:00', NULL),
-(97, 'Murry', 'Gisburne', 'mgisburne2o@bloglines.com', '2018-10-30 23:00:00', '2018-03-07 23:00:00', NULL),
-(98, 'Ly', 'Kopfer', 'lkopfer2p@google.com.br', '2018-01-28 23:00:00', '2018-09-02 22:00:00', NULL),
-(99, 'Dita', 'Buret', 'dburet2q@auda.org.au', '2018-04-11 22:00:00', '2018-08-01 22:00:00', NULL),
-(100, 'Madonna', 'Mark', 'mmark2r@joomla.org', '2018-01-08 23:00:00', '2018-09-20 22:00:00', NULL);
+INSERT INTO `student` (`id`, `school_year_id`, `project_id`, `firstname`, `lastname`, `email`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 'Toto', 'Test', 'toto.test@example.com', '2021-01-01 00:00:00', '2021-01-01 00:00:00'),
+(2, 1, 1, 'Titi', 'Test', 'titi.test@example.com', '2021-01-02 00:00:00', '2021-01-02 00:00:00'),
+(3, 1, 1, 'Tata', 'Test', 'tata.test@example.com', '2021-01-03 00:00:00', '2021-01-03 00:00:00'),
+(4, 1, 1, 'Tutu', 'Test', 'tutu.test@example.com', '2021-01-04 00:00:00', '2021-01-04 00:00:00'),
+(5, 1, 1, 'Tete', 'Test', 'tete.test@example.com', '2021-01-05 00:00:00', '2021-01-05 00:00:00'),
+(6, 6, 16, 'Rémy', 'Hamon', 'remy.hamon@example.com', '2021-01-26 05:12:36', '2021-01-26 05:12:36'),
+(7, 5, 15, 'Patrick', 'Leveque', 'patrick.leveque@example.com', '2021-01-27 16:54:23', '2021-01-27 16:54:23'),
+(8, 4, 14, 'Nathalie', 'Bouvet', 'nathalie.bouvet@example.com', '2021-01-30 23:16:51', '2021-01-30 23:16:51'),
+(9, 3, 13, 'Philippine', 'Michel', 'philippine.michel@example.com', '2021-01-30 04:55:40', '2021-01-30 04:55:40'),
+(10, 2, 12, 'David', 'Brunet', 'david.brunet@example.com', '2021-01-27 12:13:22', '2021-01-27 12:13:22'),
+(11, 1, 11, 'Gilles', 'Marty', 'gilles.marty@example.com', '2021-01-29 11:29:05', '2021-01-29 11:29:05'),
+(12, 10, 10, 'Patrick', 'Gilbert', 'patrick.gilbert@example.com', '2021-01-26 01:05:18', '2021-01-26 01:05:18'),
+(13, 9, 9, 'Jacques', 'Guillou', 'jacques.guillou@example.com', '2021-01-28 15:18:21', '2021-01-28 15:18:21'),
+(14, 8, 8, 'Théodore', 'Mendes', 'theodore.mendes@example.com', '2021-01-30 03:42:09', '2021-01-30 03:42:09'),
+(15, 7, 7, 'Olivier', 'Pasquier', 'olivier.pasquier@example.com', '2021-01-26 02:08:40', '2021-01-26 02:08:40'),
+(16, 6, 6, 'Honoré', 'Valette', 'honore.valette@example.com', '2021-01-29 00:56:50', '2021-01-29 00:56:50'),
+(17, 5, 5, 'Gabrielle', 'Perret', 'gabrielle.perret@example.com', '2021-01-25 14:56:18', '2021-01-25 14:56:18'),
+(18, 4, 4, 'Patrick', 'Laroche', 'patrick.laroche@example.com', '2021-01-29 13:50:51', '2021-01-29 13:50:51'),
+(19, 3, 3, 'Augustin', 'Dubois', 'augustin.dubois@example.com', '2021-01-28 01:00:36', '2021-01-28 01:00:36'),
+(20, 2, 2, 'Gilles', 'Hamon', 'gilles.hamon@example.com', '2021-01-26 04:03:20', '2021-01-26 04:03:20'),
+(21, 1, 1, 'Émile', 'Allain', 'emile.allain@example.com', '2021-01-30 03:04:35', '2021-01-30 03:04:35'),
+(22, 10, 20, 'Dorothée', 'Cohen', 'dorothee.cohen@example.com', '2021-01-26 16:46:31', '2021-01-26 16:46:31'),
+(23, 9, 19, 'Robert', 'Garnier', 'robert.garnier@example.com', '2021-01-29 09:24:15', '2021-01-29 09:24:15'),
+(24, 8, 18, 'Joseph', 'Pichon', 'joseph.pichon@example.com', '2021-01-29 08:08:56', '2021-01-29 08:08:56'),
+(25, 7, 17, 'Luce', 'Marchal', 'luce.marchal@example.com', '2021-01-26 22:39:39', '2021-01-26 22:39:39'),
+(26, 6, 16, 'Augustin', 'Verdier', 'augustin.verdier@example.com', '2021-01-28 07:55:34', '2021-01-28 07:55:34'),
+(27, 5, 15, 'William', 'Gillet', 'william.gillet@example.com', '2021-01-29 05:34:13', '2021-01-29 05:34:13'),
+(28, 4, 14, 'Anastasie', 'Guillou', 'anastasie.guillou@example.com', '2021-01-25 20:41:22', '2021-01-25 20:41:22'),
+(29, 3, 13, 'Adrien', 'Berger', 'adrien.berger@example.com', '2021-01-29 00:05:26', '2021-01-29 00:05:26'),
+(30, 2, 12, 'Patrick', 'Ollivier', 'patrick.ollivier@example.com', '2021-01-25 03:01:57', '2021-01-25 03:01:57'),
+(31, 1, 11, 'Victor', 'Barre', 'victor.barre@example.com', '2021-01-27 09:18:26', '2021-01-27 09:18:26'),
+(32, 10, 10, 'Corinne', 'Poulain', 'corinne.poulain@example.com', '2021-01-30 10:05:42', '2021-01-30 10:05:42'),
+(33, 9, 9, 'Zoé', 'Lombard', 'zoe.lombard@example.com', '2021-01-27 11:59:59', '2021-01-27 11:59:59'),
+(34, 8, 8, 'Alain', 'Blanchard', 'alain.blanchard@example.com', '2021-01-29 15:09:09', '2021-01-29 15:09:09'),
+(35, 7, 7, 'Mathilde', 'Guilbert', 'mathilde.guilbert@example.com', '2021-01-28 23:54:00', '2021-01-28 23:54:00'),
+(36, 6, 6, 'Philippe', 'Fleury', 'philippe.fleury@example.com', '2021-01-26 00:11:31', '2021-01-26 00:11:31'),
+(37, 5, 5, 'Xavier', 'Boulanger', 'xavier.boulanger@example.com', '2021-01-25 19:19:19', '2021-01-25 19:19:19'),
+(38, 4, 4, 'David', 'Blanchet', 'david.blanchet@example.com', '2021-01-30 07:23:23', '2021-01-30 07:23:23'),
+(39, 3, 3, 'Aimée', 'Albert', 'aimee.albert@example.com', '2021-01-28 19:55:08', '2021-01-28 19:55:08'),
+(40, 2, 2, 'Hélène', 'Tessier', 'helene.tessier@example.com', '2021-01-26 11:31:49', '2021-01-26 11:31:49'),
+(41, 1, 1, 'Daniel', 'Hernandez', 'daniel.hernandez@example.com', '2021-01-27 07:40:11', '2021-01-27 07:40:11'),
+(42, 10, 20, 'Chantal', 'Masson', 'chantal.masson@example.com', '2021-01-29 02:29:24', '2021-01-29 02:29:24'),
+(43, 9, 19, 'Dominique', 'Roy', 'dominique.roy@example.com', '2021-01-26 20:45:16', '2021-01-26 20:45:16'),
+(44, 8, 18, 'Antoine', 'Bonnet', 'antoine.bonnet@example.com', '2021-01-31 06:54:39', '2021-01-31 06:54:39'),
+(45, 7, 17, 'Roland', 'Legrand', 'roland.legrand@example.com', '2021-01-31 03:53:26', '2021-01-31 03:53:26'),
+(46, 6, 16, 'Véronique', 'Pasquier', 'veronique.pasquier@example.com', '2021-01-26 16:08:31', '2021-01-26 16:08:31'),
+(47, 5, 15, 'Michelle', 'Schneider', 'michelle.schneider@example.com', '2021-01-30 01:36:05', '2021-01-30 01:36:05'),
+(48, 4, 14, 'Susan', 'Pichon', 'susan.pichon@example.com', '2021-01-27 10:57:50', '2021-01-27 10:57:50'),
+(49, 3, 13, 'Nath', 'Vallee', 'nath.vallee@example.com', '2021-01-28 23:32:18', '2021-01-28 23:32:18'),
+(50, 2, 12, 'Marguerite', 'Morvan', 'marguerite.morvan@example.com', '2021-01-30 20:42:48', '2021-01-30 20:42:48'),
+(51, 1, 11, 'Isaac', 'Gaudin', 'isaac.gaudin@example.com', '2021-01-28 22:22:32', '2021-01-28 22:22:32'),
+(52, 10, 10, 'Jacqueline', 'Descamps', 'jacqueline.descamps@example.com', '2021-01-31 08:31:17', '2021-01-31 08:31:17'),
+(53, 9, 9, 'Célina', 'Robin', 'celina.robin@example.com', '2021-01-27 14:35:56', '2021-01-27 14:35:56'),
+(54, 8, 8, 'Henri', 'Goncalves', 'henri.goncalves@example.com', '2021-01-27 19:25:05', '2021-01-27 19:25:05'),
+(55, 7, 7, 'Chantal', 'Da Costa', 'chantal.da-costa@example.com', '2021-01-29 18:51:53', '2021-01-29 18:51:53'),
+(56, 6, 6, 'Victor', 'Rolland', 'victor.rolland@example.com', '2021-01-29 07:48:11', '2021-01-29 07:48:11'),
+(57, 5, 5, 'Frédéric', 'Evrard', 'frederic.evrard@example.com', '2021-01-26 03:36:04', '2021-01-26 03:36:04'),
+(58, 4, 4, 'Xavier', 'Voisin', 'xavier.voisin@example.com', '2021-01-28 00:54:15', '2021-01-28 00:54:15'),
+(59, 3, 3, 'Roland', 'Pruvost', 'roland.pruvost@example.com', '2021-01-28 16:45:12', '2021-01-28 16:45:12'),
+(60, 2, 2, 'Alix', 'Jacques', 'alix.jacques@example.com', '2021-01-26 11:59:15', '2021-01-26 11:59:15'),
+(61, 1, 1, 'Marcelle', 'Joseph', 'marcelle.joseph@example.com', '2021-01-29 02:19:52', '2021-01-29 02:19:52'),
+(62, 10, 20, 'Éléonore', 'Peltier', 'eleonore.peltier@example.com', '2021-01-30 07:25:04', '2021-01-30 07:25:04'),
+(63, 9, 19, 'Isaac', 'Jean', 'isaac.jean@example.com', '2021-01-29 05:09:48', '2021-01-29 05:09:48'),
+(64, 8, 18, 'Dominique', 'Leleu', 'dominique.leleu@example.com', '2021-01-28 17:52:02', '2021-01-28 17:52:02'),
+(65, 7, 17, 'Alexandrie', 'Perez', 'alexandrie.perez@example.com', '2021-01-26 23:50:30', '2021-01-26 23:50:30'),
+(66, 6, 16, 'Margaux', 'Samson', 'margaux.samson@example.com', '2021-01-26 07:45:23', '2021-01-26 07:45:23'),
+(67, 5, 15, 'Nathalie', 'Marie', 'nathalie.marie@example.com', '2021-01-27 00:51:57', '2021-01-27 00:51:57'),
+(68, 4, 14, 'Alexandria', 'Roux', 'alexandria.roux@example.com', '2021-01-29 12:44:32', '2021-01-29 12:44:32'),
+(69, 3, 13, 'Monique', 'De Sousa', 'monique.de-sousa@example.com', '2021-01-26 14:37:28', '2021-01-26 14:37:28'),
+(70, 2, 12, 'Charlotte', 'Merle', 'charlotte.merle@example.com', '2021-01-27 17:04:21', '2021-01-27 17:04:21'),
+(71, 1, 11, 'Richard', 'Bernier', 'richard.bernier@example.com', '2021-01-27 22:47:26', '2021-01-27 22:47:26'),
+(72, 10, 10, 'Pénélope', 'Peron', 'penelope.peron@example.com', '2021-01-30 01:26:53', '2021-01-30 01:26:53'),
+(73, 9, 9, 'Élise', 'Fontaine', 'elise.fontaine@example.com', '2021-01-30 03:28:12', '2021-01-30 03:28:12'),
+(74, 8, 8, 'Guy', 'Auger', 'guy.auger@example.com', '2021-01-25 15:02:52', '2021-01-25 15:02:52'),
+(75, 7, 7, 'Alphonse', 'Marques', 'alphonse.marques@example.com', '2021-01-28 04:07:26', '2021-01-28 04:07:26'),
+(76, 6, 6, 'Claire', 'Pires', 'claire.pires@example.com', '2021-01-28 05:48:32', '2021-01-28 05:48:32'),
+(77, 5, 5, 'Alfred', 'Regnier', 'alfred.regnier@example.com', '2021-01-27 07:35:49', '2021-01-27 07:35:49'),
+(78, 4, 4, 'André', 'Alexandre', 'andre.alexandre@example.com', '2021-01-30 05:26:54', '2021-01-30 05:26:54'),
+(79, 3, 3, 'Camille', 'Mace', 'camille.mace@example.com', '2021-01-30 03:34:51', '2021-01-30 03:34:51'),
+(80, 2, 2, 'Margaud', 'Vincent', 'margaud.vincent@example.com', '2021-01-28 16:16:43', '2021-01-28 16:16:43'),
+(81, 1, 1, 'Bernadette', 'Guyot', 'bernadette.guyot@example.com', '2021-01-25 10:42:18', '2021-01-25 10:42:18'),
+(82, 10, 20, 'Michèle', 'Joseph', 'michele.joseph@example.com', '2021-01-28 10:54:55', '2021-01-28 10:54:55'),
+(83, 9, 19, 'Antoine', 'Camus', 'antoine.camus@example.com', '2021-01-28 14:50:13', '2021-01-28 14:50:13'),
+(84, 8, 18, 'Audrey', 'Hoareau', 'audrey.hoareau@example.com', '2021-01-27 22:44:47', '2021-01-27 22:44:47'),
+(85, 7, 17, 'Franck', 'Fabre', 'franck.fabre@example.com', '2021-01-31 01:49:48', '2021-01-31 01:49:48'),
+(86, 6, 16, 'Suzanne', 'Launay', 'suzanne.launay@example.com', '2021-01-29 04:28:02', '2021-01-29 04:28:02'),
+(87, 5, 15, 'Océane', 'Tessier', 'oceane.tessier@example.com', '2021-01-25 01:36:26', '2021-01-25 01:36:26'),
+(88, 4, 14, 'Antoine', 'Millet', 'antoine.millet@example.com', '2021-01-25 19:35:40', '2021-01-25 19:35:40'),
+(89, 3, 13, 'Richard', 'Boulanger', 'richard.boulanger@example.com', '2021-01-26 14:38:00', '2021-01-26 14:38:00'),
+(90, 2, 12, 'Robert', 'Alves', 'robert.alves@example.com', '2021-01-28 10:52:47', '2021-01-28 10:52:47'),
+(91, 1, 11, 'Édith', 'Fernandez', 'edith.fernandez@example.com', '2021-01-25 14:14:27', '2021-01-25 14:14:27'),
+(92, 10, 10, 'Célina', 'Parent', 'celina.parent@example.com', '2021-01-30 11:24:23', '2021-01-30 11:24:23'),
+(93, 9, 9, 'Pierre', 'Marechal', 'pierre.marechal@example.com', '2021-01-30 19:42:50', '2021-01-30 19:42:50'),
+(94, 8, 8, 'Jacqueline', 'Aubert', 'jacqueline.aubert@example.com', '2021-01-31 17:31:03', '2021-01-31 17:31:03'),
+(95, 7, 7, 'Théophile', 'Roux', 'theophile.roux@example.com', '2021-01-27 05:28:32', '2021-01-27 05:28:32'),
+(96, 6, 6, 'Victor', 'Bourdon', 'victor.bourdon@example.com', '2021-01-30 09:58:48', '2021-01-30 09:58:48'),
+(97, 5, 5, 'Gilles', 'Guilbert', 'gilles.guilbert@example.com', '2021-01-28 19:43:01', '2021-01-28 19:43:01'),
+(98, 4, 4, 'Marcelle', 'Levy', 'marcelle.levy@example.com', '2021-01-26 05:16:02', '2021-01-26 05:16:02'),
+(99, 3, 3, 'Rémy', 'Legendre', 'remy.legendre@example.com', '2021-01-25 15:26:56', '2021-01-25 15:26:56'),
+(100, 2, 2, 'Robert', 'Blanchet', 'robert.blanchet@example.com', '2021-01-25 20:12:49', '2021-01-25 20:12:49');
 
 --
 -- Tronquer la table avant d'insérer `student_tag`
@@ -179,14 +270,19 @@ TRUNCATE TABLE `student_tag`;
 INSERT INTO `student_tag` (`student_id`, `tag_id`) VALUES
 (1, 1),
 (1, 2),
-(2, 4),
-(2, 5),
-(3, 4),
-(3, 5),
+(1, 3),
+(2, 1),
+(2, 2),
+(2, 3),
+(3, 1),
+(3, 2),
+(3, 3),
 (4, 1),
 (4, 2),
 (4, 3),
-(4, 5);
+(5, 1),
+(5, 2),
+(5, 3);
 
 --
 -- Tronquer la table avant d'insérer `tag`
@@ -198,11 +294,16 @@ TRUNCATE TABLE `tag`;
 --
 
 INSERT INTO `tag` (`id`, `name`, `description`) VALUES
-(1, 'html', ''),
-(2, 'css', ''),
-(3, 'js', ''),
-(4, 'php', ''),
-(5, 'sql', '');
+(1, 'HTML', NULL),
+(2, 'CSS', NULL),
+(3, 'JavaScript', NULL),
+(4, 'Python', NULL),
+(5, 'PHP', NULL),
+(6, 'SQL', NULL),
+(7, 'React', NULL),
+(8, 'Vue', NULL),
+(9, 'Symfony', NULL),
+(10, 'Bash', NULL);
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
