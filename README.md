@@ -21,18 +21,18 @@ Voici le schéma de la BDD :
 
 student :
 
-- id : int, unsigned, primary key, auto-increment
+- id : int, primary key, auto-increment
 - firstname : varchar, 190
 - lastname : varchar, 190
 - email : varchar, 190
 - created_at : datetime
 - updated_at : datetime
-- school_year_id : int, unsigned, foreign key : school_year.id
-- project_id : int, unsigned, nullable, foreign key : project.id
+- school_year_id : int, foreign key : school_year.id
+- project_id : int, nullable, foreign key : project.id
 
 school_year :
 
-- id : int, unsigned, primary key, auto-increment
+- id : int, primary key, auto-increment
 - name : varchar, 190
 - description : text, nullable
 - start_date : date, nullable
@@ -40,7 +40,7 @@ school_year :
 
 project :
 
-- id : int, unsigned, primary key, auto-increment
+- id : int, primary key, auto-increment
 - name : varchar, 190
 - description : text, nullable
 - client_name : varchar, 190
@@ -50,19 +50,19 @@ project :
 
 tag :
 
-- id : int, unsigned, primary key, auto-increment
+- id : int, primary key, auto-increment
 - name : varchar, 190
 - description : text
 
 project_tag :
 
-- project_id : int, unsigned, index, constraint : project.id
-- tag_id : int, unsigned, index, constraint : tag.id
+- project_id : int, index, constraint : project.id
+- tag_id : int, index, constraint : tag.id
 
 student_tag :
 
-- student_id : int, unsigned, index, constraint : student.id
-- tag_id : int, unsigned, index, constraint : tag.id
+- student_id : int, index, constraint : student.id
+- tag_id : int, index, constraint : tag.id
 
 ## Requêtes SQL possibles
 
