@@ -38,7 +38,9 @@ FROM tag;
 
 -- Exo 1.11
 -- Écrivez la requête qui permet de lister les students ayant un projet
+-- Note : les students sans projet ont une colonne `project_id` qui est nulle
 
 -- Exo 1.12
 -- Écrivez la requête qui permet de lister les students n'ayant pas de projet
+-- Note : les students sans projet ont une colonne `project_id` qui est nulle
 
