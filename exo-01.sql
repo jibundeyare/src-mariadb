@@ -34,5 +34,5 @@ FROM tag;
 -- Écrivez la requête qui permet de lister les projets dont le nom du client ne contient pas la chaîne de caractères `Dolores`
 
 -- Exo 1.10
--- Écrivez la requête qui permet de lister les projets dont la date de création est postérieure au 01 juillet 2021 inclus
+-- Écrivez la requête qui permet de lister les projets dont la date de création est postérieure au 1er juillet 2021 inclus
 
