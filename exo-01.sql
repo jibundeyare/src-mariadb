@@ -36,3 +36,9 @@ FROM tag;
 -- Exo 1.10
 -- Écrivez la requête qui permet de lister les projets dont la date de création est postérieure au 1er juillet 2021 inclus
 
+-- Exo 1.11
+-- Écrivez la requête qui permet de lister les students ayant un projet
+
+-- Exo 1.12
+-- Écrivez la requête qui permet de lister les students n'ayant pas de projet
+
