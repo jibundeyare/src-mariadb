@@ -31,16 +31,16 @@ FROM tag;
 -- Écrivez la requête qui permet de lister les students dont la date de création est antérieure au 10 janvier 2021 inclus
 
 -- Exo 1.9
--- Écrivez la requête qui permet de lister les projets dont la description contient pas la chaîne de caractères `Dolores`
+-- Écrivez la requête qui permet de lister les projects dont la description contient pas la chaîne de caractères `Dolores`
 
 -- Exo 1.10
--- Écrivez la requête qui permet de lister les projets dont la date de création est postérieure au 1er juillet 2021 inclus
+-- Écrivez la requête qui permet de lister les projects dont la date de création est postérieure au 1er juillet 2021 inclus
 
 -- Exo 1.11
--- Écrivez la requête qui permet de lister les students ayant un projet
--- Note : les students sans projet ont une colonne `project_id` qui est nulle
+-- Écrivez la requête qui permet de lister les students ayant un project
+-- Note : les students sans project ont une colonne `project_id` qui est nulle
 
 -- Exo 1.12
--- Écrivez la requête qui permet de lister les students n'ayant pas de projet
--- Note : les students sans projet ont une colonne `project_id` qui est nulle
+-- Écrivez la requête qui permet de lister les students n'ayant pas de project
+-- Note : les students sans project ont une colonne `project_id` qui est nulle
 

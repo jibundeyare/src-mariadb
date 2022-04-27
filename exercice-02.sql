@@ -54,9 +54,9 @@ WHERE id = 6
 -- - tag : Bash
 
 -- Exo 2.7
--- Supprimez la relation entre un student et un projet :
+-- Supprimez la relation entre un student et un project :
 -- - student : Arthur Lacombe
--- - projet : Dicta quia at qui
+-- - project : Dicta quia at qui
 
 -- Exo 2.8
 -- Supprimez toutes les relations entre un student et ses tags :
@@ -67,8 +67,8 @@ WHERE id = 6
 -- - student : Odette Thomas
 
 -- Exo 2.10
--- Supprimez un projet et toutes les relations avec ses dépendances, c-à-d les relations avec des student et les relations avec des tags :
--- - projet : Ut delectus explicabo.
+-- Supprimez un project et toutes les relations avec ses dépendances, c-à-d les relations avec des student et les relations avec des tags :
+-- - project : Ut delectus explicabo.
 -- Note : vous devez supprimez les relations avec les dépendances mais pas les dépendances.
 -- Autrement dit ne supprimez aucun student ni aucun tag.
 
