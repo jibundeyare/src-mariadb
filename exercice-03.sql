@@ -39,7 +39,7 @@ AND create_date <= '2021-01-01'
 
 -- Exo 3.6
 -- Listez les projects :
--- - dont la date de création est postérieure au 1er janvier 2021 inclus
+-- - dont la date de début est postérieure au 1er janvier 2021 inclus
 -- - ET dont la date de début est antérieure au 1er juillet 2021 inclus
 
 -- Exo 3.7
