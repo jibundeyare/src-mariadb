@@ -51,7 +51,7 @@ WHERE id = 6
 -- Exo 2.6
 -- Supprimez la relation entre un student et un tag :
 -- - student : Zacharie Evrard
--- - tag : Bash
+-- - tag : Terminal Bash
 
 -- Exo 2.7
 -- Supprimez la relation entre un student et un project :
