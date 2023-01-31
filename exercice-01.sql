@@ -25,7 +25,7 @@ FROM tag;
 -- Écrivez la requête qui permet de lister les projects dont l'id n'est pas `3`
 
 -- Exo 1.7
--- Écrivez la requête qui permet de lister les students dont l'email contient la chaîne de caractères `.com`
+-- Écrivez la requête qui permet de lister les students dont l'email se termine par la chaîne de caractères `.com`
 
 -- Exo 1.8
 -- Écrivez la requête qui permet de lister les students dont la date de création est antérieure au 10 janvier 2021 inclus
