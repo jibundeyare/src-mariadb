@@ -69,6 +69,7 @@ WHERE id = 6
 -- Exo 2.10
 -- Supprimez un project et toutes les relations avec ses dépendances, c-à-d les relations avec des student et les relations avec des tags :
 -- - project : Ut delectus explicabo.
+-- Vous devez écrire trois requêtes pour réaliser la tâche.
 -- Note : vous devez supprimez les relations avec les dépendances mais pas les dépendances.
 -- Autrement dit ne supprimez aucun student ni aucun tag.
 
